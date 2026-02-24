@@ -11,8 +11,21 @@
     <h1 class="text-2xl">Listas Produtos</h1>
     <input 
         type="text" 
+        placeholder="Código"
+        class="border-2 border-black px-4 py-2 rounded"
+        id="codigo"
+    >
+    <input 
+        type="text" 
+        placeholder="Produto"
         class="border-2 border-black px-4 py-2 rounded"
         id="produto"
+    >
+    <input 
+        type="text" 
+        placeholder="Quantidade"
+        class="border-2 border-black px-4 py-2 rounded"
+        id="quantidade"
     >
     <button 
         class="bg-blue-500 text-white px-4 py-2 rounded"
@@ -20,10 +33,11 @@
     >
         Adicionar
     </button>
-    <div 
-        id="lista"
-        class="flex flex-col gap-2">
-        
+    <div class="flex flex-col gap-4">
+        <div
+            id="lista" class="flex flex-col gap-2"
+        >
+        </div>
     </div>
 </body>
 </html>
