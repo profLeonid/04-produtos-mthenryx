@@ -11,6 +11,10 @@ function adicionarProduto(){
         alert("Alguma caixa de entrada está vazia")
     }else if(!isNaN(produto)){
         alert("O produto não pode ser um número")
+    }else if(isNaN(codigo)){
+        alert("O código deve ser um número")
+    }else if(isNaN(quantidade)){
+        alert("A quantidade deve ser um número")
     }else{
         const linha = document.createElement("div")
         linha.className = "flex gap-2"
@@ -20,12 +24,12 @@ function adicionarProduto(){
         const span3 = document.createElement("span")
 
         span1.textContent = codigo
-        span2.textContent = quantidade
-        span3.textContent = produto
-
-        span1.className = "bg-blue-200 px-8 py-2 border-2 border-black rounded"
-        span2.className = "bg-blue-200 px-8 py-2 border-2 border-black rounded"
-        span3.className = "bg-blue-200 px-8 py-2 border-2 border-black rounded"
+        span2.textContent = produto
+        span3.textContent = quantidade
+        
+        span1.className = "flex items-center justify-center bg-blue-200 text-sm h-8 w-36 border-2 border-black rounded"
+        span2.className = "flex items-center justify-center bg-blue-200 text-sm h-8 w-36 border-2 border-black rounded"
+        span3.className = "flex items-center justify-center bg-blue-200 text-sm h-8 w-36 border-2 border-black rounded"
 
         linha.appendChild(span1)
         linha.appendChild(span2)
