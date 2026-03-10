@@ -3,41 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./main.js" defer></script>
     <title>Produtos</title>
 </head>
-<body class="bg-gray-200 flex flex-col items-center justify-center h-screen gap-4">
-    <h1 class="text-2xl">Listas Produtos</h1>
-    <input 
-        type="text" 
-        placeholder="Código"
-        class="border-2 border-black px-4 py-2 rounded"
-        id="codigo"
-    >
-    <input 
-        type="text" 
-        placeholder="Produto"
-        class="border-2 border-black px-4 py-2 rounded"
-        id="produto"
-    >
-    <input 
-        type="text" 
-        placeholder="Quantidade"
-        class="border-2 border-black px-4 py-2 rounded"
-        id="quantidade"
-    >
-    <button 
-        class="bg-blue-500 text-white px-4 py-2 rounded"
-        onclick="adicionarProduto(), limparInput()"
-    >
-        Adicionar
-    </button>
-    <div class="flex flex-col gap-4">
-        <div
-            id="lista" class="flex flex-col gap-2"
-        >
+<body class="bg-gray-500 h-screen flex items-center justify-center">
+    <div class="bg-white/50 flex flex-col items-center justify-center gap-4 rounded playfair">
+        <h1 class="text-2xl mb-8 mt-8">Listas Produtos</h1>
+        <input 
+            type="text" 
+            placeholder="Código" 
+            class="border-2 border-black px-4 py-2 rounded" 
+            id="codigo">
+        <input 
+            type="text" 
+            placeholder="Produto" 
+            class="border-2 border-black px-4 py-2 rounded ml-8 mr-8" 
+            id="produto">
+        <input 
+            type="text" 
+            placeholder="Quantidade" 
+            class="border-2 border-black px-4 py-2 rounded mb-8"
+            id="quantidade">
+        <button 
+            class="bg-blue-500 text-white px-4 py-2 rounded transition duration-300
+                   hover:bg-blue-700"
+            onclick=" adicionarProduto(), limparInput()">
+            Adicionar
+        </button>
+        <div class="flex flex-col gap-4">
+            <div 
+                id="lista" 
+                class="flex flex-col gap-2 m-4">
+            </div>
         </div>
     </div>
 </body>
+
 </html>

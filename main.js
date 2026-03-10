@@ -9,6 +9,8 @@ function adicionarProduto(){
 
     if(codigo == "" || produto == "" || quantidade == ""){
         alert("Alguma caixa de entrada está vazia")
+    }else if(!isNaN(produto)){
+        alert("O produto não pode ser um número")
     }else{
         const linha = document.createElement("div")
         linha.className = "flex gap-2"
